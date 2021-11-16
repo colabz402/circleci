@@ -3,7 +3,7 @@ jobs:
     machine:
       image: ubuntu-2004:202010-01 # recommended linux image
     resource_class: large
-   steps:
+    steps:
       - checkout
       - run:
           name: "Say hello"
