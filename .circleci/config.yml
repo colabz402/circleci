@@ -3,17 +3,8 @@ jobs:
     machine:
       image: ubuntu-2004:202010-01 # recommended linux image
     resource_class: large
-    
-    steps:
-  workflows:
-  say-hello-workflow:
-    jobs:
-      - say-hello
-      - say-hello
-      - say-hello
-      - say-hello
-      - say-hello
-      - say-hello
-      - say-hello
-      - say-hello
-parallelism: 3
+   steps:
+      - checkout
+      - run:
+          name: "Say hello"
+          command: "echo Hello, World!"
