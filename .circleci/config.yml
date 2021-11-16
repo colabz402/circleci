@@ -1,10 +1,10 @@
-# ~/.circleci/config.yml
-version: 2
+version: 2.1
 jobs:
-  test:
+  build:
     docker:
-      - image: cimg/<language>:<version TAG>
+      - image: circleci/ruby:2.4.2-jessie-node
         auth:
           username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
+          password: $DOCKERHUB_PASSWORD
+ reference
     parallelism: 4
